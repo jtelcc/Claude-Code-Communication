@@ -16,4 +16,4 @@
 ```
 
 ## 基本フロー
-PRESIDENT → boss1 → workers → boss1 → PRESIDENT 
+PRESIDENT → boss1 → workers → boss1 → PRESIDENT

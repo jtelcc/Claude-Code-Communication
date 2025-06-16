@@ -44,14 +44,14 @@
 ```bash
 # 10分後に進捗確認（タイマー設定）
 sleep 600 && {
-    if [ ! -f ./tmp/worker1_done.txt ] || [ ! -f ./tmp/worker2_done.txt ] || [ ! -f ./tmp/worker3_done.txt ]; then
-        echo "進捗確認を開始します..."
-        
-        # 未完了のworkerに進捗確認
-        [ ! -f ./tmp/worker1_done.txt ] && ./agent-send.sh worker1 "進捗はいかがですか？困っていることがあれば共有してください。"
-        [ ! -f ./tmp/worker2_done.txt ] && ./agent-send.sh worker2 "進捗はいかがですか？困っていることがあれば共有してください。"
-        [ ! -f ./tmp/worker3_done.txt ] && ./agent-send.sh worker3 "進捗はいかがですか？困っていることがあれば共有してください。"
-    fi
+  if [ ! -f ./tmp/worker1_done.txt ] || [ ! -f ./tmp/worker2_done.txt ] || [ ! -f ./tmp/worker3_done.txt ]; then
+    echo "進捗確認を開始します..."
+
+    # 未完了のworkerに進捗確認
+    [ ! -f ./tmp/worker1_done.txt ] && ./agent-send.sh worker1 "進捗はいかがですか？困っていることがあれば共有してください。"
+    [ ! -f ./tmp/worker2_done.txt ] && ./agent-send.sh worker2 "進捗はいかがですか？困っていることがあれば共有してください。"
+    [ ! -f ./tmp/worker3_done.txt ] && ./agent-send.sh worker3 "進捗はいかがですか？困っていることがあれば共有してください。"
+  fi
 } &
 ```
 
@@ -132,4 +132,4 @@ sleep 600 && {
 - workerを指示待ちにせず、主体的な貢献者として扱う
 - 天才的な統合力で1+1+1を10にする
 - タイムマネジメントと品質のバランス
-- 構造化された分かりやすい報告で価値を可視化 
+- 構造化された分かりやすい報告で価値を可視化

@@ -48,9 +48,9 @@ sleep 600 && {
     echo "進捗確認を開始します..."
 
     # 未完了のworkerに進捗確認
-    [ ! -f ./tmp/worker1_done.txt ] && ./agent-send.sh worker1 "進捗はいかがですか？困っていることがあれば共有してください。"
-    [ ! -f ./tmp/worker2_done.txt ] && ./agent-send.sh worker2 "進捗はいかがですか？困っていることがあれば共有してください。"
-    [ ! -f ./tmp/worker3_done.txt ] && ./agent-send.sh worker3 "進捗はいかがですか？困っていることがあれば共有してください。"
+    [ ! -f ./tmp/worker1_done.txt ] && ./agent-send.sh worker1 "進捗はいかがですか？困っていることがあれば共有してください。すでに完了報告を行なっている場合は、受領できていないため、boss1に再度報告してください。要約ではなく全量お願いします。"
+    [ ! -f ./tmp/worker2_done.txt ] && ./agent-send.sh worker2 "進捗はいかがですか？困っていることがあれば共有してください。すでに完了報告を行なっている場合は、受領できていないため、boss1に再度報告してください。要約ではなく全量お願いします。"
+    [ ! -f ./tmp/worker3_done.txt ] && ./agent-send.sh worker3 "進捗はいかがですか？困っていることがあれば共有してください。すでに完了報告を行なっている場合は、受領できていないため、boss1に再度報告してください。要約ではなく全量お願いします。"
   fi
 } &
 ```
